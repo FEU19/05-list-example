@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 
 ## Gameplan
-1. mockup codepen
+1. mockup codepen: https://codepen.io/david-zocom/pen/vYOgbrb?editors=1100
 2. vilka komponenter behöver vi?
 3. vilka services behöver vi?
 4. vilka interface behöver vi?
