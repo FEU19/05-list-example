@@ -1,4 +1,5 @@
 <div>
-	<input type="text" placeholder="city" /> <br/>
-	<button>Add new city</button>
+	<input type="text" placeholder="city"
+	 	(keyup)="onKeyUp($event)" /> <br/>
+	<button (click)="saveCity()">Add new city</button>
 </div>
