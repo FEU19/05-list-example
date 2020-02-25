@@ -1,5 +1,12 @@
 <app-header></app-header>
 
-<app-smart-city-list></app-smart-city-list>
+<app-smart-city-list
+	[data]="data"></app-smart-city-list>
 
-<app-add-city-form></app-add-city-form>
+<app-add-city-form
+	(onSaveCity)="addNewCity($event)"></app-add-city-form>
+
+
+
+
+<!--  -->

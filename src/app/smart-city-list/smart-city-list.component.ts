@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
 	selector: 'app-smart-city-list',
@@ -7,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SmartCityListComponent implements OnInit {
 	// fetch data from service in future version
-	data = [
-		'Göteborg', 'Helsingborg', 'Rom', 'Sydney'
-	];
+	
+	@Input() data = [];
 
 	constructor() { }
 
