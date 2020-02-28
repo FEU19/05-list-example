@@ -14,4 +14,14 @@ export class AppComponent {
 		console.log('addNewCity', name);
 		this.data.push(name);
 	}
+	handleDelete(cityName: string): void {
+		this.data = this.data.filter( name => name !== cityName );
+		console.log('handleDelete: new list = ', this.data);
+	}
 }
+
+
+
+
+
+//
