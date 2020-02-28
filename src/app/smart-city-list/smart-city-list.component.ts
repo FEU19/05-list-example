@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { City } from '../city';
 
 @Component({
 	selector: 'app-smart-city-list',
@@ -8,7 +9,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class SmartCityListComponent implements OnInit {
 	// fetch data from service in future version
 
-	@Input() data = [];
+	@Input() data: City[] = [];
 	@Output() deleteCity = new EventEmitter<string>();
 
 	constructor() { }

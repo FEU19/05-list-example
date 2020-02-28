@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { City } from '../city';
 
 @Component({
 	selector: 'app-city-list-item',
@@ -6,11 +7,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 	styleUrls: ['./city-list-item.component.css']
 })
 export class CityListItemComponent implements OnInit {
-	@Input() cityName: string = '???';
+	@Input() city: City = { name: '???' };
 	@Output() deleteCity = new EventEmitter<string>();
 
 	onDeleteCity() {
-		this.deleteCity.emit(this.cityName);
+		this.deleteCity.emit(this.city.name);
 	}
 
 	constructor() { }
