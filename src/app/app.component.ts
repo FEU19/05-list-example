@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { City } from './city';
 
 @Component({
 	selector: 'app-root',
@@ -7,15 +8,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 	title = 'listExample';
-	data = [
-		'Göteborg', 'Helsingborg', 'Rom', 'Sydney'
+	data: City[] = [
+		{ name: 'Göteborg' },
+		{ name: 'Helsingborg' },
+		{ name: 'Rom' },
+		{ name: 'Sydney'}
 	];
 	addNewCity(name: string): void {
 		console.log('addNewCity', name);
-		this.data.push(name);
+		let cityObject = { name: name };
+		this.data.push(cityObject);
 	}
 	handleDelete(cityName: string): void {
-		this.data = this.data.filter( name => name !== cityName );
+		this.data = this.data.filter( city => city.name !== cityName );
 		console.log('handleDelete: new list = ', this.data);
 	}
 }
